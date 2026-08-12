@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Martina ❤️ Nazareno</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #ff758c, #ff7eb3);
+      color: white;
+      text-align: center;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .portada {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 30px 20px;
+    }
+
+    h1 {
+      font-size: 48px;
+      margin-bottom: 15px;
+      animation: aparecer 2s ease;
+    }
+
+    .corazon {
+      font-size: 80px;
+      animation: latir 1.2s infinite;
+    }
+
+    .subtitulo {
+      font-size: 20px;
+      margin: 15px 0 30px;
+    }
+
+    .boton {
+      border: none;
+      background: white;
+      color: #ff4f81;
+      padding: 15px 28px;
+      border-radius: 30px;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 5px 20px rgba(0,0,0,.2);
+    }
+
+    section {
+      background: rgba(255,255,255,.15);
+      margin: 20px;
+      padding: 30px 20px;
+      border-radius: 25px;
+      backdrop-filter: blur(8px);
+    }
+
+    h2 {
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .carta {
+      max-width: 600px;
+      margin: auto;
+      line-height: 1.8;
+      font-size: 18px;
+    }
+
+    .contador {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tiempo {
+      background: rgba(255,255,255,.2);
+      padding: 15px;
+      border-radius: 15px;
+      min-width: 80px;
+    }
+
+    .numero {
+      font-size: 28px;
+      font-weight: bold;
+      display: block;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .galeria img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 18px;
+      box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    }
+
+    footer {
+      padding: 40px 20px;
+      font-size: 18px;
+    }
+
+    .flotante {
+      position: fixed;
+      top: -30px;
+      font-size: 25px;
+      animation: caer linear forwards;
+      pointer-events: none;
+    }
+
+    @keyframes latir {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.2);
+      }
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes caer {
+      to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="portada">
+
+    <div class="corazon">❤️</div>
+
+    <h1>Martina & Nazareno</h1>
+
+    <p class="subtitulo">
+      Una historia que recién comienza... 💕
+    </p>
+
+    <button class="boton" onclick="mostrarAmor()">
+      💌 Abrir nuestra historia
+    </button>
+
+  </div>
+
+  <section id="historia">
+
+    <h2>❤️ Nuestra historia</h2>
+
+    <div class="carta">
+      <p>
+        Martina, desde que llegaste a mi vida muchas cosas cambiaron.
+        Cada momento junto a vos se convirtió en un recuerdo que quiero
+        guardar para siempre.
+      </p>
+
+      <br>
+
+      <p>
+        No sé qué nos espera en el futuro, pero sí sé que quiero seguir
+        compartiendo momentos, risas, abrazos y aventuras con vos.
+      </p>
+
+      <br>
+
+      <p>
+        Gracias por estar conmigo. ❤️
+      </p>
+
+      <br>
+
+      <p>
+        <strong>Te amo, Martina. ❤️‍🩹</strong>
+      </p>
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>⏳ Nuestro tiempo juntos</h2>
+
+    <p style="margin-bottom:20px;">
+      Llevamos juntos...
+    </p>
+
+    <div class="contador">
+
+      <div class="tiempo">
+        <span class="numero" id="dias">0</span>
+        días
+      </div>
+
+      <div class="tiempo">
+        <span class="numero" id="horas">0</span>
+        horas
+      </div>
+
+      <div class="tiempo">
+        <span class="numero" id="minutos">0</span>
+        minutos
+      </div>
+
+      <div class="tiempo">
+        <span class="numero" id="segundos">0</span>
+        segundos
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>📸 Nuestros recuerdos</h2>
+
+    <div class="galeria">
+
+      <!-- Poné tus fotos en el mismo repositorio -->
+      <!-- y reemplazá estos nombres por los nombres reales -->
+
+      <img src="foto1.jpg" alt="Nuestro recuerdo">
+      <img src="foto2.jpg" alt="Nuestro recuerdo">
+      <img src="foto3.jpg" alt="Nuestro recuerdo">
+
+    </div>
+
+  </section>
+
+
+  <section>
+
+    <h2>💖 Para vos</h2>
+
+    <p class="carta">
+      Si alguna vez dudás de lo importante que sos para mí,
+      entrá nuevamente a esta página y recordá que hay alguien
+      que eligió hacer este pequeño rincón solamente para vos. ❤️
+    </p>
+
+  </section>
+
+
+  <footer>
+
+    <p>Hecho con ❤️ por Nazareno</p>
+
+    <p style="margin-top:10px;">
+      Martina ❤️ Nazareno
+    </p>
+
+  </footer>
+
+
+  <script>
+
+    /*
+      IMPORTANTE:
+      Cambiá esta fecha por la fecha en que comenzaron su relación.
+
+      FORMATO:
+      AÑO-MES-DÍA HORA:MINUTO:SEGUNDO
+
+      Ejemplo:
+      "2026-04-05T00:00:00"
+    */
+
+    const fechaInicio = new Date("2026-04-19T00:00:00");
+
+    function actualizarContador() {
+
+      const ahora = new Date();
+
+      const diferencia = ahora - fechaInicio;
+
+      const segundosTotales =
+        Math.floor(diferencia / 1000);
+
+      const dias =
+        Math.floor(segundosTotales / 86400);
+
+      const horas =
+        Math.floor((segundosTotales % 86400) / 3600);
+
+      const minutos =
+        Math.floor((segundosTotales % 3600) / 60);
+
+      const segundos =
+        segundosTotales % 60;
+
+      document.getElementById("dias").textContent = dias;
+      document.getElementById("horas").textContent = horas;
+      document.getElementById("minutos").textContent = minutos;
+      document.getElementById("segundos").textContent = segundos;
+    }
+
+    actualizarContador();
+
+    setInterval(actualizarContador, 1000);
+
+
+    function mostrarAmor() {
+
+      document.getElementById("historia")
+        .scrollIntoView({
+          behavior: "smooth"
+        });
+
+      crearCorazones();
+    }
+
+
+    function crearCorazones() {
+
+      for (let i = 0; i < 20; i++) {
+
+        const corazon =
+          document.createElement("div");
+
+        corazon.className = "flotante";
+        corazon.textContent = "❤️";
+
+        corazon.style.left =
+          Math.random() * 100 + "vw";
+
+        corazon.style.animationDuration =
+          (Math.random() * 3 + 3) + "s";
+
+        document.body.appendChild(corazon);
+
+        setTimeout(() => {
+          corazon.remove();
+        }, 6000);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
